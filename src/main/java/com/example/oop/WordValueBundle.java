@@ -1,14 +1,19 @@
 package main.java.com.example.oop;
 
+import main.java.com.example.calculator.ValueCalculatorImpl;
+import main.java.com.example.calculator.WordValueCalculatorInterface;
+
 public class WordValueBundle implements Comparable<WordValueBundle>
 {
     private final String word;
     private final int value;
+    private WordValueCalculatorInterface valueCalculatorInterface;
 
     public WordValueBundle(String word)
     {
+        this.valueCalculatorInterface = new ValueCalculatorImpl();
         this.word = word;
-        this.value = calculateValue(word);
+        this.value = valueCalculatorInterface.calculateValue(word);
     }
 
     public String getWord()
@@ -18,19 +23,6 @@ public class WordValueBundle implements Comparable<WordValueBundle>
 
     public int getValue()
     {
-        return value;
-    }
-
-    public static int calculateValue(String word)
-    {
-        int value = 0;
-        if (word != null)
-        {
-            for (char c : word.toCharArray())
-            {
-                value += Character.toUpperCase(c) - 'A' + 1;
-            }
-        }
         return value;
     }
 
