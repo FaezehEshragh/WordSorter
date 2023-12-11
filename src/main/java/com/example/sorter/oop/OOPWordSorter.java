@@ -4,11 +4,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import main.java.com.example.calculator.WordValueCalculatorInterface;
 import main.java.com.example.sorter.WordSorter;
 
 public class OOPWordSorter implements WordSorter
 {
 
+    private WordValueCalculatorInterface valueCalculator;
+
+    public OOPWordSorter(WordValueCalculatorInterface valueCalculator)
+    {
+        this.valueCalculator = valueCalculator;
+    }
     /**
      * Uses an OOP approach to sort the words
      *
@@ -36,6 +43,30 @@ public class OOPWordSorter implements WordSorter
         }
 
         return sortedWords;
+    }
+
+    public class WordValueBundle implements Comparable<WordValueBundle>
+    {
+        private final String word;
+        private final int value;
+
+        public WordValueBundle(String word)
+        {
+            this.word = word;
+            this.value = valueCalculator.calculateValue(word);
+        }
+
+        public String getWord()
+        {
+            return word;
+        }
+
+        @Override
+        public int compareTo(WordValueBundle other)
+        {
+            return Integer.compare(this.value, other.value);
+        }
+
     }
 
 }

@@ -2,6 +2,8 @@ package main.java.com.example;
 
 import java.util.List;
 
+import main.java.com.example.calculator.WordValueCalculatorImpl;
+import main.java.com.example.calculator.WordValueCalculatorInterface;
 import main.java.com.example.sorter.functional.FunctionalWordSorter;
 import main.java.com.example.sorter.oop.OOPWordSorter;
 
@@ -11,12 +13,15 @@ public class Main
     {
         List<String> wordList = List.of("RunKeeper", "Coding", "Test", "OOP", "FUNCTIONAL", "PROGRAMMING");
 
-        // Using OOP
-        List<String> sortedWordsOOP = new OOPWordSorter().sortWords(wordList);
+        // Initiating the calculator to inject to the sorter classes in the next step
+        WordValueCalculatorInterface wordValueCalculator = new WordValueCalculatorImpl();
+
+        // Using OOP to sort the words
+        List<String> sortedWordsOOP = new OOPWordSorter(wordValueCalculator).sortWords(wordList);
         System.out.println("Sorted Words (OOP): " + sortedWordsOOP);
 
-        // Using Functional Programming
-        List<String> sortedWordsFunctional = new FunctionalWordSorter().sortWords(wordList);
+        // Using Functional Programming to sort the words
+        List<String> sortedWordsFunctional = new FunctionalWordSorter(wordValueCalculator).sortWords(wordList);
         System.out.println("Sorted Words (Functional): " + sortedWordsFunctional);
     }
 }

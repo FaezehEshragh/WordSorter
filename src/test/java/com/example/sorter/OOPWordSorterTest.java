@@ -3,6 +3,8 @@ package test.java.com.example.sorter;
 import java.util.Arrays;
 import java.util.List;
 
+import main.java.com.example.calculator.WordValueCalculatorImpl;
+import main.java.com.example.calculator.WordValueCalculatorInterface;
 import main.java.com.example.sorter.WordSorter;
 import main.java.com.example.sorter.oop.OOPWordSorter;
 import org.junit.BeforeClass;
@@ -13,11 +15,14 @@ import static org.junit.Assert.assertEquals;
 public class OOPWordSorterTest
 {
     static WordSorter wordSorter;
+    static WordValueCalculatorInterface wordValueCalculator;
+
 
     @BeforeClass
     public static void init()
     {
-        wordSorter = new OOPWordSorter();
+        wordValueCalculator = new WordValueCalculatorImpl();
+        wordSorter = new OOPWordSorter(wordValueCalculator);
     }
 
     @Test
