@@ -1,30 +1,30 @@
-package test.java.com.example.calculator;
+package test.java.com.example.sorter;
 
 import java.util.Arrays;
 import java.util.List;
 
 import main.java.com.example.sorter.WordSorter;
-import main.java.com.example.sorter.oop.OOPWordSorter;
+import main.java.com.example.sorter.functional.FunctionalWordSorter;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class OOPWordSorterTest
+public class FunctionalWordSorterTest
 {
     static WordSorter wordSorter;
 
     @BeforeClass
     public static void init()
     {
-        wordSorter = new OOPWordSorter();
+        wordSorter = new FunctionalWordSorter();
     }
 
     @Test
-    public void testSortWordsOOP()
+    public void testFunctionalWordSort()
     {
-        List<String> wordsList = Arrays.asList("Test", "Word", "Sorter", "OOP", "PROGRAMMING");
-        List<String> expectedResult = Arrays.asList("OOP", "Word", "Test", "Sorter", "PROGRAMMING");
+        List<String> wordsList = Arrays.asList("Test", "Word", "Sorter", "Functional", "PROGRAMMING");
+        List<String> expectedResult = Arrays.asList("Word", "Test", "Sorter", "Functional", "PROGRAMMING");
 
         List<String> actualResult = wordSorter.sortWords(wordsList);
 
