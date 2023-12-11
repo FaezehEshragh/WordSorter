@@ -2,8 +2,8 @@ package main.java.com.example;
 
 import java.util.List;
 
-import main.java.com.example.functional.FunctionalWordSorter;
-import main.java.com.example.oop.OOPWordSorter;
+import main.java.com.example.sorter.functional.FunctionalWordSorter;
+import main.java.com.example.sorter.oop.OOPWordSorter;
 
 public class Main
 {

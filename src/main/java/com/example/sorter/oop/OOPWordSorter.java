@@ -1,12 +1,20 @@
-package main.java.com.example.oop;
+package main.java.com.example.sorter.oop;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class OOPWordSorter
+import main.java.com.example.sorter.WordSorter;
+
+public class OOPWordSorter implements WordSorter
 {
 
+    /**
+     * Uses an OOP approach to sort the words
+     *
+     * @param words - List of input words
+     * @return List<String> - List of sorted words
+     */
     public List<String> sortWords(List<String> words)
     {
         List<WordValueBundle> wordValueList = new ArrayList<>();

@@ -1,6 +1,6 @@
-package main.java.com.example.oop;
+package main.java.com.example.sorter.oop;
 
-import main.java.com.example.calculator.ValueCalculatorImpl;
+import main.java.com.example.calculator.WordValueCalculatorImpl;
 import main.java.com.example.calculator.WordValueCalculatorInterface;
 
 public class WordValueBundle implements Comparable<WordValueBundle>
@@ -11,7 +11,7 @@ public class WordValueBundle implements Comparable<WordValueBundle>
 
     public WordValueBundle(String word)
     {
-        this.valueCalculatorInterface = new ValueCalculatorImpl();
+        this.valueCalculatorInterface = new WordValueCalculatorImpl();
         this.word = word;
         this.value = valueCalculatorInterface.calculateValue(word);
     }
