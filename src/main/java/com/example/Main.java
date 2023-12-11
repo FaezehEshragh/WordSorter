@@ -1,8 +1,10 @@
 package main.java.com.example;
 
+import java.util.Comparator;
 import java.util.List;
 
 import main.java.com.example.oop.OOPWordSorter;
+import main.java.com.example.oop.WordValueBundle;
 
 public class Main
 {
@@ -14,5 +16,10 @@ public class Main
         List<String> sortedWordsOOP = new OOPWordSorter().sortWords(wordList);
         System.out.println("Sorted Words (OOP): " + sortedWordsOOP);
 
+        // Using Functional Programming
+        List<String> sortedWordsFunctional = wordList.stream()
+                                                     .sorted(Comparator.comparingInt(WordValueBundle::calculateValue))
+                                                     .toList();
+        System.out.println("Sorted Words (Functional): " + sortedWordsFunctional);
     }
 }
