@@ -6,7 +6,7 @@ in standard OOP and again using functional programming. Please include the code,
 
 
 
-# Assumptions:
+## Assumptions:
 
 1. **Word Value Calculation:**
     - The numeric value of a word is determined by summing the values of its letters.
@@ -20,3 +20,17 @@ in standard OOP and again using functional programming. Please include the code,
 
 4. **Java Built-in Functionality:**
     - Utilizing Java's built-in functionality is assumed to be permissible for the solution.
+
+## Input
+
+I used a list of words as input: `{"RunKeeper", "Coding", "Test", "OOP", "FUNCTIONAL", "PROGRAMMING"}`
+
+## Output
+
+Upon executing the code, the following output was obtained:
+
+- Sorted Words (OOP): `[OOP, Coding, Test, RunKeeper, FUNCTIONAL, PROGRAMMING]`
+- Sorted Words (Functional): `[OOP, Coding, Test, RunKeeper, FUNCTIONAL, PROGRAMMING]`
+
+
+
