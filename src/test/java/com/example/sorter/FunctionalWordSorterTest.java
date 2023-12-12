@@ -1,28 +1,19 @@
-package test.java.com.example.sorter;
+package com.example.sorter;
 
 import java.util.Arrays;
 import java.util.List;
 
 import com.example.calculator.WordValueCalculatorImpl;
 import com.example.calculator.WordValueCalculatorInterface;
-import com.example.sorter.WordSorter;
 import com.example.sorter.functional.FunctionalWordSorter;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class FunctionalWordSorterTest
 {
-     static WordSorter wordSorter;
-     static WordValueCalculatorInterface wordValueCalculator;
-
-    @BeforeClass
-    public static void init()
-    {
-        wordValueCalculator = new WordValueCalculatorImpl();
-        wordSorter = new FunctionalWordSorter(wordValueCalculator);
-    }
+    WordValueCalculatorInterface wordValueCalculator = new WordValueCalculatorImpl();
+    WordSorter wordSorter = new FunctionalWordSorter(wordValueCalculator);
 
     @Test
     public void testFunctionalWordSort()

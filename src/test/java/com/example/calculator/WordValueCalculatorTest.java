@@ -1,21 +1,12 @@
 package com.example.calculator;
 
-import com.example.calculator.WordValueCalculatorImpl;
-import com.example.calculator.WordValueCalculatorInterface;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class WordValueCalculatorTest
 {
-    static WordValueCalculatorInterface wordValueCalculator;
-
-    @BeforeClass
-    public static void init()
-    {
-        wordValueCalculator = new WordValueCalculatorImpl();
-    }
+    WordValueCalculatorInterface wordValueCalculator = new WordValueCalculatorImpl();
 
     @Test
     public void shouldCalculateWordValueCorrectly()

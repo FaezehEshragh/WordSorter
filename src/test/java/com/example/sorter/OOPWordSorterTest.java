@@ -5,25 +5,15 @@ import java.util.List;
 
 import com.example.calculator.WordValueCalculatorImpl;
 import com.example.calculator.WordValueCalculatorInterface;
-import com.example.sorter.WordSorter;
 import com.example.sorter.oop.OOPWordSorter;
-import org.junit.BeforeClass;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class OOPWordSorterTest
 {
-    static WordSorter wordSorter;
-    static WordValueCalculatorInterface wordValueCalculator;
-
-
-    @BeforeClass
-    public static void init()
-    {
-        wordValueCalculator = new WordValueCalculatorImpl();
-        wordSorter = new OOPWordSorter(wordValueCalculator);
-    }
+    WordValueCalculatorInterface wordValueCalculator = new WordValueCalculatorImpl();
+    WordSorter wordSorter= new OOPWordSorter(wordValueCalculator);
 
     @Test
     public void testSortWordsOOP()
