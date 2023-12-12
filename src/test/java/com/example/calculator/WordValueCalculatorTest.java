@@ -1,7 +1,7 @@
-package test.java.com.example.calculator;
+package com.example.calculator;
 
-import main.java.com.example.calculator.WordValueCalculatorImpl;
-import main.java.com.example.calculator.WordValueCalculatorInterface;
+import com.example.calculator.WordValueCalculatorImpl;
+import com.example.calculator.WordValueCalculatorInterface;
 import org.junit.BeforeClass;
 import org.junit.Test;
 

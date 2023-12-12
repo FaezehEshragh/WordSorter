@@ -1,4 +1,4 @@
-package main.java.com.example.sorter;
+package com.example.sorter;
 
 import java.util.List;
 

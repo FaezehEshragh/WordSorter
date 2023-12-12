@@ -1,11 +1,11 @@
-package main.java.com.example.sorter.oop;
+package com.example.sorter.oop;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import main.java.com.example.calculator.WordValueCalculatorInterface;
-import main.java.com.example.sorter.WordSorter;
+import com.example.calculator.WordValueCalculatorInterface;
+import com.example.sorter.WordSorter;
 
 public class OOPWordSorter implements WordSorter
 {

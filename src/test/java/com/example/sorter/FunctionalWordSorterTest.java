@@ -3,10 +3,10 @@ package test.java.com.example.sorter;
 import java.util.Arrays;
 import java.util.List;
 
-import main.java.com.example.calculator.WordValueCalculatorImpl;
-import main.java.com.example.calculator.WordValueCalculatorInterface;
-import main.java.com.example.sorter.WordSorter;
-import main.java.com.example.sorter.functional.FunctionalWordSorter;
+import com.example.calculator.WordValueCalculatorImpl;
+import com.example.calculator.WordValueCalculatorInterface;
+import com.example.sorter.WordSorter;
+import com.example.sorter.functional.FunctionalWordSorter;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
@@ -14,8 +14,8 @@ import static org.junit.Assert.assertEquals;
 
 public class FunctionalWordSorterTest
 {
-    static WordSorter wordSorter;
-    static WordValueCalculatorInterface wordValueCalculator;
+     static WordSorter wordSorter;
+     static WordValueCalculatorInterface wordValueCalculator;
 
     @BeforeClass
     public static void init()
